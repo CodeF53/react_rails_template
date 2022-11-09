@@ -20,6 +20,9 @@ Install required stuff:
 TODO: do this later
 ```
 
+### Nginx setup:
+TODO: later
+
 ### Starting your server for the first time
 Git clone your repo you made from this one:
 ```
