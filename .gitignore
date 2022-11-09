@@ -14,14 +14,14 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-!/log/.keep
-!/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
+# Ignore compiled react app
+/public/*
+/public/robots.txt
+!/public/502.html
+
+# Ignore pidfiles.
 /tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
-
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
