@@ -16,6 +16,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Custom component styling
+.labeled_input > label { margin-right: 1rem; }
+.invisible { opacity: 0; cursor: default; }
+.link { color: aqua; text-decoration: underline; }
+.error { color: #F00; }
+.panel {
+  background-color: var(--bkg-elev1);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.237);
+}
+
+// HTML default component styling
+h1, h2, h3, h4, h5, p, button, span, label, ::marker, svg, ul, a, input, textarea {
+  margin: 0;
+  text-decoration: none;
+  color: var(--txt-color);
+}
+button, input, textarea {
+  border:  none;
+  resize: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 100rem;
+  background-color: var(--bkg-elev1);
+}
+button {
+  scale: 0.95;
+  &:hover  { scale: 1 }
+  &:active { scale: 0.95; }
+
+  &:hover, &:active { background-color: var(--bkg-elev2) }
+  &.elev2 { &:hover, &:active { background-color: var(--bkg-elev3) } }
+  &.elev3 { &:hover, &:active { background-color: var(--bkg-elev4) } }
+}
+
 // Variables
 :root {
   --bkg-color: #1c1c1c;
@@ -30,37 +65,3 @@
 .elev2 { background-color: var(--bkg-elev2) }
 .elev3 { background-color: var(--bkg-elev3) }
 .elev4 { background-color: var(--bkg-elev4) }
-
-// Custom component styling
-.labeled_input > label { margin-right: 1rem; }
-.invisible { opacity: 0; cursor: default; }
-.link { color: aqua; text-decoration: underline; }
-.error { color: #F00; }
-.panel {
-  background-color: var(--bkg-elev1);
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.237);
-}
-
-// HTML default component styling
-h1, h2, h3, h4, h5, p, button, span, label, ::marker, svg, ul, a, input {
-  margin: 0;
-  text-decoration: none;
-  color: var(--txt-color);
-}
-button, input {
-  border:  none;
-  padding: 0.25rem 0.5rem;
-  border-radius: 100rem;
-  background-color: var(--bkg-elev1);
-}
-button {
-  scale: 0.95;
-  &:hover  { scale: 1 }
-  &:active { scale: 0.95; }
-
-  &:hover, &:active { background-color: var(--bkg-elev2) }
-  &.elev2 { &:hover, &:active { background-color: var(--bkg-elev3) } }
-  &.elev3 { &:hover, &:active { background-color: var(--bkg-elev4) } }
-}

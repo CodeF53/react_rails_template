@@ -4,9 +4,9 @@ import Spacer from "./components/Spacer";
 import Footer from "./elements/Footer";
 import Header from "./elements/Header";
 import Home from "./pages/Home";
-import { LoginSignup } from "./pages/LoginSignup";
+import LoginSignup from "./pages/LoginSignup";
 
-function App() {
+export default function App() {
   // persistent user through local storage
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")))
   useEffect(() => { localStorage.setItem("user", JSON.stringify(user));
@@ -32,5 +32,3 @@ function App() {
     <Footer/>
   </div>
 }
-
-export default App;
